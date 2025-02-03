@@ -17,9 +17,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Step 2: Deploy to GitHub Pages
+      # Step 2: Set up Node.js (required for GitHub Pages action)
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      # Step 3: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          folder: . # Deploy files from the root directory
