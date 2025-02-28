@@ -11,11 +11,11 @@ const { sponsors } = Astro.props;
         href={sponsor.url}
         target="_blank"
         rel="noopener noreferrer"
-        class={`block transform transition-transform duration-300 hover:scale-110 intersect-once intersect-quarter motion-safe:opacity-0 motion-safe:intersect:animate-fade`}
+        class="block transform transition-transform duration-300 hover:scale-110 intersect-once intersect-quarter motion-safe:opacity-0 motion-safe:intersect:animate-fade"
         style={`animation-delay: ${index * 150}ms`}
       >
         <img
-          src={sponsor.logo}
+          src={`/${sponsor.logo}`} 
           alt={sponsor.name}
           class="h-24 w-24 object-contain rounded-xl bg-white shadow-md hover:shadow-lg transition-shadow duration-300"
         />
