@@ -63,7 +63,10 @@ export interface MetaDataTwitter {
 export interface Image {
   src: string;
   alt?: string;
+  class?: string;  // ✅ Correction : Ajout de class
+  style?: string;  // ✅ Correction : Ajout de style
 }
+
 
 export interface Video {
   src: string;
