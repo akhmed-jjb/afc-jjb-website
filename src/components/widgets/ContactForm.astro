@@ -11,7 +11,7 @@ const {
   disclaimer,
   button = 'Envoyer le message', // Valeur par défaut sous forme de string
   description,
-  endpoint, // Assure-toi que cette variable est bien définie dans Contact.astro
+  endpoint,
   id,
   isDark = false,
   classes = {},
@@ -41,45 +41,6 @@ const {
         description={description}
         endpoint={endpoint}
       />
-      <!-- Message de confirmation caché par défaut -->
-      <div id="confirmation-message" class="hidden text-green-500 mt-4 font-bold">
-        ✅ Votre message a bien été envoyé !
-      </div>
     </div>
   )}
 </WidgetWrapper>
-
-<!-- Ajout du script pour gérer l'envoi AJAX du formulaire -->
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const form = document.querySelector("form"); // Récupère le formulaire
-    const confirmationMessage = document.getElementById("confirmation-message");
-
-    if (form && confirmationMessage) {
-      form.addEventListener("submit", async (event) => {
-        event.preventDefault(); // Empêche la redirection vers Formspree
-
-        const formData = new FormData(form);
-
-        try {
-          const response = await fetch(form.action, { // Utilisation correcte de l'endpoint
-            method: "POST",
-            body: formData,
-            headers: {
-              "Accept": "application/json"
-            }
-          });
-
-          if (response.ok) {
-            form.reset(); // Réinitialise le formulaire après envoi
-            confirmationMessage.classList.remove("hidden"); // Affiche le message de confirmation
-          } else {
-            alert("❌ Une erreur s'est produite. Veuillez réessayer plus tard.");
-          }
-        } catch (error) {
-          alert("❌ Une erreur est survenue. Vérifiez votre connexion internet.");
-        }
-      });
-    }
-  });
-</script>
