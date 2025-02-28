@@ -1,0 +1,22 @@
+---
+const { photos } = Astro.props;
+---
+
+<div class="max-w-6xl mx-auto grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-6">
+  {photos.map((photo, index) => (
+    <div
+      class={`relative rounded-lg overflow-hidden shadow-md transform transition duration-300 hover:scale-105 aspect-[4/3] intersect-once intersect-quarter motion-safe:opacity-0 motion-safe:intersect:animate-fade`}
+      style={`animation-delay: ${index * 100}ms`}
+    >
+      <img
+        src={photo.src}
+        alt={photo.alt}
+        class="w-full h-full object-contain bg-gray-900"
+        loading="lazy"
+      />
+      <div class="absolute bottom-0 left-0 bg-black bg-opacity-70 text-white text-xs p-2 w-full text-center">
+        {photo.caption}
+      </div>
+    </div>
+  ))}
+</div>

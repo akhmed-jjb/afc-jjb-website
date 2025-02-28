@@ -1,0 +1,25 @@
+---
+const { sponsors } = Astro.props;
+---
+
+<section class="not-prose py-10 text-center overflow-hidden intersect-once intersect-quarter motion-safe:opacity-0 motion-safe:intersect:animate-fade">
+  <h2 class="text-3xl font-bold text-default mb-8">Nos Partenaires</h2>
+
+  <div id="sponsor-carousel" class="relative flex justify-center items-center gap-8 group">
+    {sponsors.map((sponsor, index) => (
+      <a
+        href={sponsor.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class={`block transform transition-transform duration-300 hover:scale-110 intersect-once intersect-quarter motion-safe:opacity-0 motion-safe:intersect:animate-fade`}
+        style={`animation-delay: ${index * 150}ms`}
+      >
+        <img
+          src={sponsor.logo}
+          alt={sponsor.name}
+          class="h-24 w-24 object-contain rounded-xl bg-white shadow-md hover:shadow-lg transition-shadow duration-300"
+        />
+      </a>
+    ))}
+  </div>
+</section>

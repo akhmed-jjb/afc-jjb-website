@@ -1,11 +1,11 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
 import type { MetaData } from '~/types';
 
 export interface Props {
   frontmatter: {
     title?: string;
+    ignoreTitleTemplate?: boolean; // Ajout pour ignorer le suffixe dans certaines pages
   };
 }
 
@@ -13,6 +13,7 @@ const { frontmatter } = Astro.props;
 
 const metadata: MetaData = {
   title: frontmatter?.title,
+  ignoreTitleTemplate: frontmatter?.ignoreTitleTemplate ?? false, // On s'assure que c'est false par défaut
 };
 ---
 

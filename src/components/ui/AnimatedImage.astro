@@ -1,0 +1,17 @@
+---
+const { src, alt, class: customClass = '', delay = 0, width, height } = Astro.props;
+---
+
+<div
+  class={`w-full flex justify-center mt-8 intersect-once intersect-quarter motion-safe:opacity-0 motion-safe:intersect:animate-fade`}
+  style={`animation-delay: ${delay}ms`}
+>
+  <img
+    src={src}
+    alt={alt}
+    width={width}
+    height={height}
+    class={`rounded-lg bg-gray-500 shadow-lg w-full max-w-[900px] h-auto ${customClass}`}
+    loading="lazy"
+  />
+</div>

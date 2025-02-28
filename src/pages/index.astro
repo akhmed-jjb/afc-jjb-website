@@ -1,6 +1,8 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
+// Import du composant Image optimisé d’AstroWind
+import Image from '~/components/common/Image.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
@@ -12,8 +14,12 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+import Sponsor from '~/components/widgets/Sponsor.astro';
+
+import AnimatedImage from '~/components/ui/AnimatedImage.astro';
+
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'AFC JJB',
   ignoreTitleTemplate: true,
 };
 ---
@@ -21,379 +27,385 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-      { text: 'Learn more', href: '#features' },
-    ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
-  >
+  <Hero>
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 5.0</span> + Tailwind CSS
+      <div class="flex justify-center">
+        <img
+          src="/src/assets/images/logo-final-web.png"
+          alt="Logo AFC JJB"
+          width="800"
+          height="800"
+          class="mx-auto h-auto w-[500px] md:w-[700px]"
+        />
+      </div>
     </Fragment>
-
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 5.0
-        + Tailwind CSS.</span
+  
+    <Fragment slot="actions">
+      <a
+        href="#features"
+        class="border border-black text-black py-2 px-6 rounded-lg bg-transparent hover:bg-black hover:text-white transition dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black"
       >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
-      Blogs.
+        Découvrir notre esprit
+      </a>
     </Fragment>
   </Hero>
+  
+  
 
   <!-- Note Widget ******************* -->
 
-  <Note />
+  <Note /> 
 
   <!-- Features Widget *************** -->
 
   <Features
-    id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022, 2023 and 2024."
-    items={[
-      {
-        title: 'Astro + Tailwind CSS Integration',
-        description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
-      },
-      {
-        title: 'Ready-to-use Components',
-        description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
-      },
-      {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Excellent Page Speed',
-        description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
-      },
-    ]}
-  />
+  id="features"
+  tagline=""
+  title="L'ESPRIT AFC JJB"
+  subtitle="Chez Abdoulaev Fighters Club Jiu-Jitsu Brésilien, le sport est bien plus qu’un entraînement : c’est une aventure humaine, un dépassement de soi et une passion partagée. Fondé par Akhmed et Aslan Abdoulaev, notre club a marqué la naissance du Jiu-Jitsu Brésilien, du Grappling et du Pancrace à Quimper. Quel que soit votre niveau, nous vous accueillons pour progresser ensemble dans une ambiance conviviale et exigeante."
+  items={[
+    {
+      title: 'Une Histoire d’Excellence et de Transmission',
+      description:
+        'Depuis janvier 2025, nous accompagnons passionnés et curieux sur les tatamis. Fort de notre expérience internationale, nous transmettons notre savoir-faire et nos valeurs martiales pour vous permettre de développer votre plein potentiel.',
+    },
+    {
+      title: 'Des Entraînements Adaptés à Tous',
+      description:
+        'Nos séances sont conçues pour progresser physiquement et mentalement, que vous soyez débutant ou confirmé. Chaque session est une opportunité d’évoluer sous l’accompagnement de nos entraîneurs expérimentés.',
+    },
+    {
+      title: 'Une Communauté Ouverte et Solidaire',
+      description:
+        'AFC JJB, ce n’est pas juste un club, c’est une famille. Respect, discipline et entraide sont les piliers de notre communauté, forgeant un collectif où chacun progresse à son rythme. Chaque séance est un moment de partage pour une victoire collective.',
+    },
+    {
+      title: 'Trois Disciplines Complémentaires',
+      description:
+        'Jiu-Jitsu Brésilien, Grappling et Pancrace : trois arts du combat, une seule passion. Développez vos compétences en technique, stratégie et contrôle, que ce soit debout ou au sol.',
+    },
+    {
+
+}
+
+
+  ]}
+/>
+
+
+<AnimatedImage
+  src="/images/grappling.png"
+  alt="Aslan et Akhmed"
+  delay={200}
+  width={1600} // Augmenté pour une meilleure résolution
+  height={1000} // Proportion adaptée
+  class="max-w-[1400px] w-full h-auto mx-auto"
+/>
+
+
+
+  <!-- Content Widget **************** -->
+
+
+  <Features
+  id="cours"
+  tagline=""
+  title="NOS COURS"
+  subtitle={`Avez-vous envie de vous dépasser et de gagner en confiance ? Devenir plus fort, physiquement et mentalement ? Apprendre à vous défendre tout en intégrant une véritable équipe sur le tatami ?
+
+Que vous souhaitiez sortir de la routine, vous sentir mieux dans votre corps et votre esprit, ou atteindre vos objectifs en compétition, AFC JJB est fait pour vous.
+
+Nos entraîneurs expérimentés vous guideront et vous motiveront à chaque étape. Découvrez ci-dessous les disciplines que nous proposons et trouvez celle qui vous correspond !`}
+
+/>
+
+
 
   <!-- Content Widget **************** -->
 
   <Content
+  id="jjb"  
+  isAfterContent
+  items={[
+    {
+      title: 'Origine et philosophie',
+      description: `Issu du Judo et du Ju-Jitsu japonais, il a été perfectionné au Brésil avec un focus sur le combat au sol.`,
+    },
+    {
+      title: 'Principes du combat',
+      description: '<b>Debout</b> : Projections et renversements pour amener l’adversaire au sol.<br><b>Au sol</b> : Domination, contrôle et soumission grâce aux différentes techniques'
+    },
+    {
+      title: 'Manières de gagner',
+      description: '<b>Par soumission</b> : L’adversaire abandonne sous une clé ou un étranglement.<br><b>Par points</b> : Sans soumission, le combattant avec le plus de points gagne.'
+    }
+  ]}
+  image={{ src: '~/assets/images/armbar.jpg', alt: 'jjb image' }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2 text-left">Jiu-Jitsu Brésilien (JJB)</h3>
+    <p class="text-lg text-left max-w-2xl">
+      Le JJB, c’est l’art du contrôle et de la soumission. Pratiqué en kimono (Gi), il repose sur la technique et la stratégie plutôt que la force brute.
+    </p>
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
+
+
+
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="grappling"
     isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
+    isAfterContent
     items={[
       {
-        title: 'Built on top of Astro 5.0',
+        title: 'Origine et philosophie',
         description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+          'Le Grappling partage ses racines avec la lutte libre et le Jiu-Jitsu Brésilien. Son objectif est de neutraliser un adversaire en utilisant la technique plutôt que la force, en exploitant les prises corporelles et le jeu au sol.',
       },
       {
-        title: 'Styled using Tailwind CSS',
+        title: 'Principes du combat',
         description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+          'Le combat débute debout avec des techniques de lutte et de projections pour amener l’adversaire au sol. L’objectif au sol est de contrôler, progresser vers une position dominante et chercher une soumission.',
       },
       {
-        title: 'Cross-browser compatibility',
-        description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
-      },
+        title: 'Manières de gagner',
+        description: '<b>Par soumission</b> : Abandon sur clé articulaire ou étranglement.<br><b>Par points</b> : Victoire par projections, passages de garde et contrôles.'
+      }
+
+
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
-    }}
+    image={{ src: '~/assets/images/akhmed-ali.jpg', alt: 'Grappling Team'}}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Grappling</h3>
+      Un art martial sans kimono (No-Gi), axé sur le contrôle, les projections et les soumissions. 
     </Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
-
-  <!-- Content Widget **************** -->
 
   <Content
-    isAfterContent
-    items={[
-      {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
-      },
-      {
-        title: 'Multiple layout possibilities',
-        description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
-      },
-      {
-        title: 'Fully responsive design',
-        description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
-      },
-      {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
-    }}
-  >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
+  id="pancrace"
+  isAfterContent
+  items={[
+    {
+      title: 'Origine et philosophie',
+      description: `Héritier du pankration antique, le Pancrace a été modernisé avec des règles garantissant technique, sécurité et progression. Il allie la souplesse des arts martiaux et l’efficacité du combat libre.`,
+    },
+    {
+      title: 'Principes du combat',
+      description: `<b>Debout</b> : Striking (poings, pieds, genoux), esquives et projections.<br><b>Au sol</b> : Contrôle, positions dominantes et soumissions sans frappes au sol.`,
+    },
+    {
+      title: 'Manières de gagner',
+      description: `<b>Par soumission</b> : Abandon sur clé ou étranglement.<br><b>Par points</b> : Victoire selon l’efficacité technique.<br><b>Par arrêt de l’arbitre</b> : Pour garantir la sécurité des pratiquants.`,
+    },
+  ]}
+  image={{ src: '~/assets/images/fight-1.png', alt: 'fight 1 image', width: 500, height: 550  }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Pancrace</h3>
+    Un art martial complet alliant frappes, lutte et combat au sol, accessible à tous les niveaux. Une excellente porte d’entrée pour évoluer vers le MMA.
+  </Fragment>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
 
-  <!-- Content Widget **************** -->
 
-  <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Enhanced user engagement',
-        description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
-      },
-      {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
-      },
-      {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
-    }}
-  >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
 
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
+  title="Planning des cours"
+  id="planning"
+  items={[
+    {
+      title: '<span class="text-lg font-semibold text-gray-500">Halle des Sports d’Ergué-Armel</span>',
+      description: `
+        <div class="text-base font-medium text-gray-500">
+          <span class="font-semibold">Grappling :</span> <span class="font-normal">Chaque mardi de <strong>20h30</strong> à <strong>22h00</strong></span>
+        </div>
+        <div class="text-base font-medium text-gray-500">
+          <span class="font-semibold">Lieu :</span> <span class="font-normal">22 avenue Yves Thépot, Quimper</span>
+        </div>
+      `,
+    },
+    {
+      title: '<span class="text-lg font-semibold text-gray-500">MPT de Penhars</span>',
+      description: `
+        <div class="text-base font-medium text-gray-500">
+          <span class="font-semibold">Jiu-Jitsu Brésilien :</span> <span class="font-normal">Chaque lundi de <strong>19h00</strong> à <strong>21h00</strong></span>
+        </div>
+        <div class="text-base font-medium text-gray-500">
+          <span class="font-semibold">Grappling :</span> <span class="font-normal">Chaque samedi de <strong>19h00</strong> à <strong>21h00</strong></span>
+        </div>
+        <div class="text-base font-medium text-gray-500">
+          <span class="font-semibold">Lieu :</span> <span class="font-normal">39 Bd de Bretagne, 29000 Quimper</span>
+        </div>
+      `,
+    },
+    {
+      title: '<span class="text-lg font-semibold text-gray-500">Pancrace - Cours à venir</span>',
+      description: ' ',
+    },
+  ]}
+  image={{ src: '~/assets/images/salle-dojo.png', alt: 'salle-dojo image' }}
+/>
+
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
-    items={[
-      {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
+  title="ABDOULAEV FIGHTERS CLUB"
+  subtitle="Nos Entraîneurs"
+  id="equipe"
+  tagline=""
+  items={[
+    {
+      title: 'Akhmed ABDOULAEV',
+      description: `
+      <div style="text-align: justify;">
+        <div style="text-align: center; margin-bottom: 8px;"><strong>FONDATEUR / PRÉSIDENT / ENTRAÎNEUR :</strong></div>
+        Je suis passionné de sports de combat et un compétiteur aguerri, dont le parcours est jalonné de titres prestigieux sur la scène européenne.<br><br>
 
-  <!-- HighlightedPosts Widget ******* -->
+        Je suis ceinture noire en <strong>Judo</strong> et en <strong>Jiu-Jitsu Japonais</strong>, ceinture violette en <strong>Jiu-Jitsu Brésilien</strong>. Combattant professionnel en <strong>Mixed Martial Arts (MMA)</strong>. J’ai acquis une expérience de haut niveau au fil des années. J’ai également pratiqué différents sports tels que le Sambo combat, la Boxe anglaise et le Kickboxing.<br><br>
 
-  <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
-  />
+        Parmi ses nombreux titres :
+        <ul>
+              <li>🥇 <strong>Champion d’Europe IBJJF (Open) – 2012</strong>, Lisbonne.</li>
+              <li>🥇 <strong>Champion d’Europe NAGA (Expert) Grappling – 2014</strong>, Paris.</li>
+              <li>🥇 <strong>Ceinture NAGA – International JJB 2015</strong>, Monaco.</li>
+              <li>🥇 <strong>Vainqueur Fight Select 3 (Pro) – 2015</strong>, Paris.</li>
+              <li>🥇 <strong>Deux ceintures USC JJB – 2013 et 2015</strong>.</li>
+              <li>🥉 <strong>Multi-médaillé régional en Judo</strong>.</li>
+              <li>🥉 <strong>Multi-médaillé régional en Jiu-Jitsu Japonais</strong>.</li>
+        </ul>
+        <br>
+        Akhmed met aujourd’hui toute son expertise et sa passion au service des pratiquants de tous horizons. Il s’attache à transmettre <strong>rigueur, technique et valeurs martiales</strong>, en veillant à ce que chacun progresse dans un <strong>esprit de famille et de respect</strong>. Véritable moteur du club, il pousse chaque élève à <strong>se surpasser et à donner le meilleur de lui-même</strong>.
+        
+        <br><br>
+        <div style="text-align: center; font-style: italic; font-weight: bold; color: #ccc;">
+          "Rien n'est impossible tant que je suis déterminé."
+        </div>
+      </div>
+    `,
+      image: { src: '/src/assets/images/akhmed-profile.jpg', alt: 'Photo Akhmed ABDOULAEV' }, // ✅ Objet attendu
+    },
+    {
+      title: 'Aslan ABDOULAEV',
+      description: `
+      <div style="text-align: justify;">
+        <div style="text-align: center; margin-bottom: 8px;"><strong>COFONDATEUR / ENTRAÎNEUR :</strong></div>
+        Je suis passionné de sports de combat et un compétiteur de haut niveau. On me reconnaît pour ma rigueur et mon engagement sur les tatamis à l'échelle européenne.<br><br>
+
+        Je suis ceinture noire en <strong>Judo</strong> et en <strong>Jiu-Jitsu Japonais</strong>, ainsi que ceinture violette en <strong>Jiu-Jitsu Brésilien</strong>. J’ai évolué sur la scène européenne, où j’ai pu réaliser des performances de premier plan.<br><br>
+
+        Parmi ses nombreux titres :
+        <ul>
+          <li>🥇 <strong>Champion d’Europe IBJJF (Open) – 2013</strong>, Lisbonne.</li>
+          <li>🥇 <strong>Ceinture NAGA – International JJB 2015</strong>, Monaco.</li>
+          <li>🥉 <strong>Multi-médaillé régional en Judo</strong>.</li>
+          <li>🥉 <strong>Multi-médaillé régional en Jiu-Jitsu Japonais</strong>.</li>
+        </ul>
+        <br>
+        Aux côtés de son frère, Aslan met son savoir-faire technique et son expérience au service des élèves, en cultivant les valeurs de <strong>discipline, de respect et de dépassement de soi</strong>. Entraîneur bienveillant, il accompagne chaque pratiquant sur la voie de la progression, dans un <strong>esprit de famille et d’entraide</strong>.
+        
+        <br><br>
+        <div style="text-align: center; font-style: italic; font-weight: bold; color: #ccc;">
+          "Mon frère me pousse, et ma détermination brise toutes les limites."
+        </div>
+      </div>
+    `,
+      image: { src: '/src/assets/images/aslan-jjb.jpg', alt: 'Photo Aslan ABDOULAEV' }, // Remplace par l'image réelle
+    },
+  ]}
+/>
+
+
 
   <!-- FAQs Widget ******************* -->
 
   <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
-    items={[
-      {
-        title: 'Why AstroWind?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-      },
-      {
-        title: 'What do I need to start?',
-        description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
-      },
-      {
-        title: 'How to install the Astro + Tailwind CSS template?',
-        description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
-      },
-      {
-        title: "What's something that you don't understand?",
-        description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-      },
-      {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
-      },
-    ]}
-  />
+  title="Infos pratiques"
+  subtitle=""
+  tagline=""
+  id="infos-pratiques"
+  classes={{ container: 'max-w-6xl' }}
+  items={[
+    {
+      title: 'PONCTUALITÉ',
+      description:
+        "Soyez présents 15 minutes avant pour être prêts sur le tatami à l’heure indiquée. Un retard perturbe le cours et la concentration des autres pratiquants. Si vous arrivez en retard, l’accès au cours pourra vous être refusé.",
+    },
+    {
+      title: 'SÉCURITÉ SUR LES TATAMIS',
+      description:
+        "Demandez l’autorisation de l’entraîneur avant d’entrer et saluez les pratiquants en arrivant. Appliquez les consignes et évitez les collisions si vous êtes moins gradé. Respectez toujours votre partenaire. En cas de douleur ou de gêne, prévenez immédiatement l’entraîneur. Limitez vos déplacements hors du tatami et gardez votre bouteille d’eau à portée de main. Nous progressons ensemble dans un cadre sécurisé et bienveillant.",
+    },
+    
+    {
+      title: 'TENUE ET PRÉPARATION',
+      description:
+        "Une tenue adaptée est obligatoire. En Jiu-Jitsu Brésilien (JJB), le kimono (Gi) est requis. En Grappling, un short avec un t-shirt ou un rashguard est nécessaire. En Pancrace, une tenue similaire est exigée, avec des gants de boxe anglaise et mitaines, des protège-tibias, un protège-dents et une coquille de protection obligatoire pour la sécurité.",
+    },
+    {
+      title: 'COURS D’ESSAI ET ADHÉSION',
+      description:
+        "Vous avez la possibilité d’effectuer trois cours d’essai pour découvrir les disciplines proposées. Si vous souhaitez poursuivre, l’inscription devient obligatoire.",
+    },
 
-  <!-- Stats Widget ****************** -->
+    {
+      title: 'HYGIÈNE ET VESTIAIRES',
+      description:
+        "Utilisez des claquettes hors des tatamis. Les chaussures et chaussettes sont interdites sur le tatami. Apportez une bouteille d’eau ou une gourde pour rester hydraté. Des vestiaires séparés sont disponibles pour vous changer et vous doucher. Présentez-vous avec des vêtements propres, sans bijoux et les cheveux attachés. Coupez vos ongles avant chaque entraînement pour éviter les blessures.",
+    },
+    {
+      title: 'UNE QUESTION ?',
+      description:
+        "Vous avez des questions sur le club ou souhaitez devenir partenaire ou sponsor ? Écrivez-nous, nous reviendrons vers vous rapidement avec toutes les informations dont vous avez besoin",
+    },
 
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
-    ]}
-  />
+  ]}
+/>
 
   <!-- CallToAction Widget *********** -->
 
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-    ]}
-  >
+  <CallToAction>
     <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+      Rejoinez l'Aventure AFC JJB
     </Fragment>
-
-    <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+  
+    <Fragment slot="actions">
+      <a href="/contact"
+        class="border border-black text-black py-2 px-6 rounded-lg bg-transparent hover:bg-black hover:text-white transition dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black"
+      >
+        Contactez-nous
+      </a>
     </Fragment>
   </CallToAction>
+  
+
+
+  <!-- ✅ AJOUT DE CECI POUR AFFICHER LES SPONSORS -->
+
+  <Sponsor
+    sponsors={[
+      { name: 'vitasod.png', logo: '/src/assets/images/vitasod.png', url: 'https://www.vitasod.fr/' },
+      { name: 'Intersport.png', logo: '/src/assets/images/intersport.png', url: 'https://www.intersport.fr/' },
+      { name: 'mairie-quimper.png', logo: '/src/assets/images/mairie-quimper.png', url: 'https://www.quimper.bzh/' },
+      { name: 'mpt-penhars.png', logo: '/src/assets/images/mpt-penhars.png', url: 'https://mptpenhars.goasso.org/' },
+    ]}
+  />
+  
 </Layout>

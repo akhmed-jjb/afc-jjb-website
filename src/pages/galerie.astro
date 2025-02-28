@@ -1,0 +1,64 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import GalerieComponent from '~/components/widgets/Galerie.astro';
+
+const metadata = {
+  title: 'Galerie',
+  description: 'Découvrez les photos de compétitions et les moments marquants du club Abdoulaev Fighters Club JJB.',
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="not-prose py-10 px-4">
+    <div class="max-w-6xl mx-auto text-center mb-8 intersect-once intersect-quarter motion-safe:opacity-0 motion-safe:intersect:animate-fade">
+      <h1 class="text-4xl font-bold text-default mb-4">Podiums & Victoires</h1>
+      <p class="text-gray-600 dark:text-gray-300">
+        Plongez dans l’histoire du club à travers nos succès sur les tatamis et nos plus belles performances.
+      </p>
+    </div>
+
+    <GalerieComponent
+      photos={[
+        // 🥋 Compétitions Angers – Armbar & Triangle
+        { src: '/images/galerie/armbar-first-angers.jpg', alt: 'Premier Armbar – Compétition à Angers', caption: 'Premier Armbar – Compétition à Angers' },
+        { src: '/images/galerie/armbar-second-angers.jpg', alt: 'Deuxième Armbar – Compétition à Angers', caption: 'Deuxième Armbar – Compétition à Angers' },
+        { src: '/images/galerie/triangle-angers-competition.jpg', alt: 'Triangle – Compétition à Angers', caption: 'Triangle – Compétition à Angers' },
+
+        // 🏆 Podiums & Compétitions Newaza
+        { src: '/images/galerie/podium-newaza-angers.jpg', alt: 'Podium – Compétition Newaza à Angers', caption: 'Podium – Compétition Newaza à Angers' },
+        { src: '/images/galerie/podium-newaza-regionale.jpg', alt: 'Podium – Compétition Newaza régionale', caption: 'Podium – Compétition Newaza régionale' },
+        { src: '/images/galerie/first-fight-regional.jpg', alt: 'Premier combat – Compétition régionale', caption: 'Premier combat – Compétition régionale' },
+
+        // 🥋 USC – Compétitions & Podiums
+        { src: '/images/galerie/armbar-first-fight-usc-2015.jpg', alt: 'Armbar – Premier combat USC 2015', caption: 'Armbar – Premier combat USC 2015' },
+        { src: '/images/galerie/final-usc-2015-triangle.jpg', alt: 'Finale – USC 2015 – Triangle', caption: 'Finale – USC 2015 – Triangle' },
+        { src: '/images/galerie/final-usc-2015.jpg', alt: 'Finale – USC 2015', caption: 'Finale – USC 2015' },
+        { src: '/images/galerie/end-usc-2015.jpg', alt: 'Fin de compétition – USC 2015', caption: 'Fin de compétition – USC 2015' },
+        { src: '/images/galerie/usc-2015-shooting.jpg', alt: 'Shooting – Compétition USC 2015', caption: 'Shooting – Compétition USC 2015' },
+        { src: '/images/galerie/usc-2013-shooting.jpg', alt: 'Shooting – Compétition USC 2013', caption: 'Shooting – Compétition USC 2013' },
+        { src: '/images/galerie/final-usc-2013.jpg', alt: 'Finale – USC 2013', caption: 'Finale – USC 2013' },
+        { src: '/images/galerie/podium-usc.jpg', alt: 'Podium – USC', caption: 'Podium – USC' },
+
+        // 🥇 NAGA – Compétitions & Ceintures
+        { src: '/images/galerie/aslan-akhmed-naga.jpg', alt: 'Aslan & Akhmed – NAGA', caption: 'Aslan & Akhmed – NAGA' },
+        { src: '/images/galerie/aslan-akhmed-naga-usc.JPG', alt: 'Aslan et Akhmed naga - usc', caption: 'Akhmed et Aslan - Démonstration de JJB' },
+        { src: '/images/galerie/naga-2014-belt.png', alt: 'NAGA 2014 – Ceinture', caption: 'NAGA 2014 – Ceinture' },
+
+        // 🔥 Fight Select & Spirit Challenge PRO
+        { src: '/images/galerie/akhmed-fight-select-3.jpg', alt: 'Akhmed – Fight Select 3', caption: 'Fight Select 3' },
+        { src: '/images/galerie/spirit-challenge-pro.jpg', alt: 'Spirit Challenge PRO', caption: 'Spirit Challenge PRO' },
+        { src: '/images/galerie/aslan-judo.jpg', alt: 'Aslan - competition de Judo', caption: 'Aslan - compétition de Judo' },
+        { src: '/images/galerie/aslan-anzor.jpg', alt: 'Aslan et Anzor', caption: 'Entraînement : Aslan et Anzor' },
+
+        // 🏋️‍♂️ Entraînements & Shootings
+        { src: '/images/galerie/training-shooting-1.jpg', alt: 'Shooting – Entraînement 1', caption: 'Shooting 1 – Entraînement' },
+        { src: '/images/galerie/training-shooting-2.jpg', alt: 'Shooting – Entraînement 2', caption: 'Shooting 2 – Entraînement' },
+        { src: '/images/galerie/training-shooting-3.jpg', alt: 'Shooting – Entraînement 3', caption: 'Shooting 3 – Entraînement' },
+
+        // 📸 Shooting Vitasod
+        { src: '/images/galerie/aslan-vitasod-shooting.jpg', alt: 'Aslan – Vitasod Shooting', caption: 'Aslan – Vitasod Shooting' },
+        { src: '/images/galerie/akhmed-vitasod-shooting.jpg', alt: 'Akhmed – Vitasod Shooting', caption: 'Akhmed – Vitasod Shooting' },
+      ]}
+    />
+  </section>
+</Layout>
