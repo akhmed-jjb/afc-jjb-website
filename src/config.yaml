@@ -35,11 +35,11 @@ i18n:
 ui:
   theme: 'system' # Valeurs: "system" | "light" | "dark" | "light:only" | "dark:only"
 
-# 📊 Google Analytics (Mettre ton ID si activé)
 analytics:
   vendors:
     googleAnalytics:
-      id: null # Ajouter ton ID Google Analytics si activé
+      id: "G-N4D74QPBB0"  # Remplace par ton propre ID
+
 
 # 🚫 Désactivation du blog (tu n'en as pas besoin)
 apps:
