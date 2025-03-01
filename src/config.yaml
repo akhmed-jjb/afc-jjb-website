@@ -1,72 +1,47 @@
 site:
-  name: AFC JJB
+  name: 'AFC JJB - Abdoulaev Fighters Club'
   site: 'https://afc-jjb.fr'
-  base: '/'
+  base: '/' 
   trailingSlash: false
+  googleSiteVerificationId: 'PXVwqcO6DnafJP3z105rluW9yB9taZPw0inQc6QCWEQ'
 
-  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
-
-# Default SEO metadata
+# 🌍 SEO & Métadonnées pour Google et les réseaux sociaux
 metadata:
   title:
-    default: AFC JJB
+    default: 'AFC JJB - Jiu-Jitsu Brésilien, Grappling, Pancrace & MMA à Quimper'
     template: '%s | AFC JJB'
-  description: "Club de Jiu-Jitsu Brésilien, Grappling, Pancrace et MMA à Quimper."
+  description: 'Découvrez l’AFC JJB, un club de Jiu-Jitsu Brésilien, Grappling, Pancrace et MMA à Quimper. Entraînements pour débutants et confirmés avec des coachs expérimentés.'
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AFC JJB
+    site_name: 'AFC JJB - Jiu-Jitsu Brésilien, Grappling et Pancrace à Quimper'
     images:
-      - url: '~/assets/images/default.png'
+      - url: 'https://afc-jjb.fr/images/logo-final-web.png'
         width: 1200
         height: 628
     type: website
-  twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
-    cardType: summary_large_image
+  social:
+    instagram: 'https://www.instagram.com/afc_jjb/'
+    tiktok: 'https://www.tiktok.com/@afc_jjb'
+    facebook: 'https://www.facebook.com/groups/1794363377995046'
 
+# 🌍 Paramètres de langue
 i18n:
   language: fr
   textDirection: ltr
 
-apps:
-  blog:
-    isEnabled: true
-    postsPerPage: 6
+# 🚀 Optimisation UI
+ui:
+  theme: 'system' # Valeurs: "system" | "light" | "dark" | "light:only" | "dark:only"
 
-    post:
-      isEnabled: true
-      permalink: '/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
-      robots:
-        index: true
-
-    list:
-      isEnabled: true
-      pathname: 'blog' # Blog main path, you can change this to "articles" (/articles)
-      robots:
-        index: true
-
-    category:
-      isEnabled: true
-      pathname: 'category' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
-      robots:
-        index: true
-
-    tag:
-      isEnabled: true
-      pathname: 'tag' # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
-      robots:
-        index: false
-
-    isRelatedPostsEnabled: true
-    relatedPostsCount: 4
-
+# 📊 Google Analytics (Mettre ton ID si activé)
 analytics:
   vendors:
     googleAnalytics:
-      id: null # or "G-XXXXXXXXXX"
+      id: null # Ajouter ton ID Google Analytics si activé
 
-ui:
-  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+# 🚫 Désactivation du blog (tu n'en as pas besoin)
+apps:
+  blog:
+    isEnabled: false
