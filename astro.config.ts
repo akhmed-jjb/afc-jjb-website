@@ -17,19 +17,47 @@ import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin, lazyImagesRehype
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const hasExternalScripts = false;
-const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroIntegration)[] = []) =>
-  hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
-
 export default defineConfig({
-  site: 'https://afc-jjb.fr',
+  site: 'https://afc-jjb.fr', // URL correcte du site
   output: 'static',
 
   integrations: [
     tailwind({
       applyBaseStyles: false,
     }),
-    sitemap(),
+
+    // ✅ Configuration propre du sitemap
+    sitemap({
+      filter: (page) => {
+        // 🔹 Supprime les anciennes pages inutiles
+        const excludedPages = new Set([
+          '/about',
+          '/homes/mobile-app',
+          '/homes/personal',
+          '/homes/saas',
+          '/homes/startup',
+          '/landing/click-through',
+          '/landing/lead-generation',
+          '/landing/pre-launch',
+          '/landing/product',
+          '/landing/sales',
+          '/landing/subscription',
+          '/pricing',
+          '/services'
+        ]);
+        return !excludedPages.has(new URL(page, 'https://afc-jjb.fr').pathname);
+      },
+
+      // 🔹 Ajoute seulement les pages utiles
+      customPages: [
+        'https://afc-jjb.fr/',
+        'https://afc-jjb.fr/galerie',
+        'https://afc-jjb.fr/contact',
+        'https://afc-jjb.fr/conditions',
+        'https://afc-jjb.fr/confidentialite'
+      ],
+    }),
+
     mdx(),
     icon({
       include: {
@@ -47,12 +75,6 @@ export default defineConfig({
         ],
       },
     }),
-
-    ...whenExternalScripts(() =>
-      partytown({
-        config: { forward: ['dataLayer.push'] },
-      })
-    ),
 
     compress({
       CSS: true,
