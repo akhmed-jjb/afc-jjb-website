@@ -48,13 +48,13 @@ metadata:
     site_name: 'AFC JJB'
     images:
       - url: 'https://afc-jjb.fr/images/logo-final-web.png'
-        width: 1200
-        height: 628
+        width: 1483
+        height: 1349
     type: website
   social:
     instagram: 'https://www.instagram.com/afc_jjb/'
     tiktok: 'https://www.tiktok.com/@afc_jjb'
-    facebook: 'https://www.facebook.com/groups/1794363377995046'
+    facebook: 'https://www.facebook.com/profile.php?id=61573992897299'
 
 ui:
   theme: 'system' 

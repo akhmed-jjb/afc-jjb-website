@@ -15,7 +15,7 @@ Le responsable de la publication est Akhmed ABDOULAEV.
 
 Le site est hébergé par GitHub, dont le siège est situé au 37 Quai du Président Roosevelt, 92130 Issy-les-Moulineaux, France.
 
-Email : afc.jjb@outlook.fr
+Email : contact@afc-jjb.fr
 
 ## 2. Acceptation des conditions
 
@@ -66,5 +66,5 @@ Les présentes CGU sont régies par le droit français. En cas de litige, les tr
 
 Pour toute question relative aux présentes conditions générales d’utilisation, vous pouvez nous contacter :
 
-- Par e-mail : afc.jjb@outlook.fr
+- Par e-mail : contact@afc-jjb.fr
 - Par courrier : Abdoulaev Fighters Club JJB, 49 rue l'île de Mayotte, 29000 Quimper

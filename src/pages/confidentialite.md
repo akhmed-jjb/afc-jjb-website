@@ -13,7 +13,7 @@ Le responsable du traitement des données personnelles est :
 
 **Abdoulaev Fighters Club JJB**  
 49 rue l'île de Mayotte, 29000 Quimper  
-Email : afc.jjb@outlook.fr
+Email : contact@afc-jjb.fr
 
 ## 2. Données collectées
 
@@ -57,7 +57,7 @@ Conformément au Règlement Général sur la Protection des Données (RGPD), vou
 - Droit d’opposition et de limitation du traitement.
 - Droit d’introduire une réclamation auprès de la CNIL.
 
-Pour exercer vos droits, contactez-nous à l’adresse suivante : **afc.jjb@outlook.fr**
+Pour exercer vos droits, contactez-nous à l’adresse suivante : **contact@afc-jjb.fr**
 
 ## 8. Durée de conservation
 
@@ -78,5 +78,5 @@ Nous nous réservons le droit de modifier cette politique à tout moment. La dat
 
 Pour toute question concernant cette politique de confidentialité, vous pouvez nous contacter :
 
-- Par email : **afc.jjb@outlook.fr**
+- Par email : **contact@afc-jjb.fr**
 - Par courrier : **Abdoulaev Fighters Club JJB, 49 rue l'île de Mayotte, 29000 Quimper**
